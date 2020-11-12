@@ -53,6 +53,50 @@
     array("y" => $cloroquina[1]["cloroquina"], "label" => "Vivos" ),
     array("y" => $cloroquina[0]["cloroquina"], "label" => "Mortos" )
     );
+
+    $r = DBExecute("SELECT pacid, DATEDIFF(datadesf,datauti) AS duracaoemdias
+                    FROM ( SELECT participantID as pacid, answer AS datauti
+                    FROM visu WHERE questionID=228) I
+                    INNER JOIN
+                    (SELECT participantID AS pacide, answer AS datadesf FROM visu WHERE questionID=124) D
+                    ON I.pacid= D.pacide");
+    while($res = mysqli_fetch_assoc($r))
+    {
+        $semanas[] = $res;
+    }
+    $countPacientes1Semana = 0;
+    $countPacientes2Semana = 0;
+    $countPacientes3Semana = 0;
+    $countPacientes4Semana = 0;
+    foreach ($semanas as $linha) 
+    {
+        if(intval($linha['duracaoemdias']) < 0)
+        {
+            continue;
+        }
+        else if(intval($linha['duracaoemdias']) <= 7)
+        {
+            $countPacientes1Semana = $countPacientes1Semana + 1;
+        }
+        else if(intval($linha['duracaoemdias']) > 7 && intval($linha['duracaoemdias']) <= 14)
+        {
+            $countPacientes2Semana = $countPacientes2Semana + 1;
+        }
+        else if(intval($linha['duracaoemdias']) > 14 && intval($linha['duracaoemdias']) <= 21)
+        {
+            $countPacientes3Semana = $countPacientes3Semana + 1;
+        }
+        else if(intval($linha['duracaoemdias']) > 21)
+        {
+            $countPacientes4Semana = $countPacientes4Semana + 1;
+        }
+    }
+    $dataPointsTempoUTI = array( 
+    array("y" => $countPacientes1Semana, "label" => "1 Semana" ),
+    array("y" => $countPacientes2Semana, "label" => "2 Semanas" ),
+    array("y" => $countPacientes3Semana, "label" => "3 Semanas" ),
+    array("y" => $countPacientes4Semana, "label" => "4 Semanas ou mais" )
+    );
  
 ?>
 <!DOCTYPE html>
@@ -90,6 +134,16 @@
             data: [{ type: "column", yValueFormatString: "#,##0.## Pacientes", dataPoints: <?php echo json_encode($dataPointsC, JSON_NUMERIC_CHECK); ?> }]
             });
             columnChart.render();
+
+            var columnChartTempoUTI = new CanvasJS.Chart("columnChartTempoUTIContainer", {
+            animationEnabled: true,
+            theme: "light2",
+            title:{ text: "Tempo que pacientes passaram na UTI" },
+            axisY: { title: "Numero de Pacientes" },
+            data: [{ type: "column", yValueFormatString: "#,##0.## Pacientes", dataPoints: <?php echo json_encode($dataPointsTempoUTI, JSON_NUMERIC_CHECK); ?> }]
+            });
+            columnChartTempoUTI.render();
+ 
  
         }
         </script>
@@ -134,6 +188,7 @@
 
             <div class="col-3 info-box border">
                 <div class="col-2 name-search">Busca 4</div>
+                <div id="columnChartTempoUTIContainer" style="height: 70%; width: 100%;"></div>
             </div>
 
             <div class="col-1"></div>
