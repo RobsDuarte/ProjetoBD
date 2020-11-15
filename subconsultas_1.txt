@@ -9,16 +9,16 @@
 </div>
 
 <div class="col-12 c">
-    <input type="radio" name="ObitosAltas" id="radio_3">                       
-    <label for="radio_3" class="f">Variavel 3</label>                            
+    <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_3">                       
+    <label for="radio_3" class="f">Fumantes</label>                            
 </div>
 
 <div class="col-12 c">
-    <input type="radio" name="ObitosAltas" id="radio_4">                       
-    <label for="radio_4" class="f">Variavel 4</label>                            
+    <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_4">                       
+    <label for="radio_4" class="f">Asmaticos</label>                            
 </div> 
 
 <div class="col-12 c">
-    <input type="radio" name="ObitosAltas" id="radio_5">                       
-    <label for="radio_5" class="f">Variavel 5</label>                            
+    <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_5">                       
+    <label for="radio_5" class="f">Idosos</label>                            
 </div> 

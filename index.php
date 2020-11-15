@@ -6,6 +6,9 @@
 
     $dataPointsObitoFem = getObitosDataFem();
     $dataPointsObitoMan = getObitosDataMan();
+    $dataPointsObitoFum = getObitosDataFum();
+    $dataPointsObitoAsm = getObitosDataAsm();
+    $dataPointsObitoHip = getObitosDataHip();
 ?>
 <!DOCTYPE html>
 
@@ -38,6 +41,36 @@
         			currentElement = document.getElementById("obitoManContainer");
         			currentElement.style.display = "block";
         		}
+        		else if(ele.id == "radio_3")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosFum();
+        			currentElement = document.getElementById("obitoFumContainer");
+        			currentElement.style.display = "block";
+        		}
+        		else if(ele.id == "radio_4")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosAsm();
+        			currentElement = document.getElementById("obitoAsmContainer");
+        			currentElement.style.display = "block";
+        		}
+        		else if(ele.id == "radio_5")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosHip();
+        			currentElement = document.getElementById("obitoHipContainer");
+        			currentElement.style.display = "block";
+        		}
         	}
         	function ObitosFem()
 			{
@@ -59,6 +92,33 @@
     			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoMan, JSON_NUMERIC_CHECK); ?> }]
     			});
     			obitoManChart.render();
+			}
+			function ObitosFum(){
+				var obitoFumChart = new CanvasJS.Chart("obitoFumContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Fumantes" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoFum, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoFumChart.render();
+			}
+			function ObitosAsm(){
+				var obitoAsmChart = new CanvasJS.Chart("obitoAsmContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Asmaticos" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoAsm, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoAsmChart.render();
+			}
+			function ObitosHip(){
+				var obitoHipChart = new CanvasJS.Chart("obitoHipContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Hipertensos" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoHip, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoHipChart.render();
 			}
         </script>         
     </head>
@@ -90,6 +150,9 @@
                     <div class='col-10 shadow-graphic'>
                         <div id="obitoFemContainer" style="height: 100%; width: 100%; display: none;"></div>
                         <div id="obitoManContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoFumContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoAsmContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoHipContainer" style="height: 100%; width: 100%; display: none;"></div>
                     </div>   
 
                 </div>                   

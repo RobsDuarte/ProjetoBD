@@ -40,6 +40,53 @@
         return $dataPointsObitoMan;
     }
 
+    function getObitosDataFum(){
+        $r = DBExecute("SELECT count(participantID) AS qntobitosfum FROM obitosfumantes
+                        UNION
+                        SELECT count(participantID) FROM altasfumantes");
+
+        while($res = mysqli_fetch_assoc($r))
+        {
+            $dataObitoFum[] = $res;
+        }
+
+        $dataPointsObitoFum = array(array("label"=>"Altas", "y"=>$dataObitoFum[1]["qntobitosfum"]  * 100 / ($dataObitoFum[1]["qntobitosfum"] + $dataObitoFum[0]["qntobitosfum"]) ),
+        array("label"=>"Obitos", "y"=>$dataObitoFum[0]["qntobitosfum"] * 100 / ($dataObitoFum[1]["qntobitosfum"] + $dataObitoFum[0]["qntobitosfum"]) ));
+
+        return $dataPointsObitoFum;
+    }
+
+    function getObitosDataAsm(){
+        $r = DBExecute("SELECT count(participantID) AS qntobitosasm FROM obitosasmaticos
+                        UNION
+                        SELECT count(participantID) FROM vivosasmaticos");
+
+        while($res = mysqli_fetch_assoc($r))
+        {
+            $dataObitoAsm[] = $res;
+        }
+
+        $dataPointsObitoAsm = array(array("label"=>"Altas", "y"=>$dataObitoAsm[1]["qntobitosasm"]  * 100 / ($dataObitoAsm[1]["qntobitosasm"] + $dataObitoAsm[0]["qntobitosasm"]) ),
+        array("label"=>"Obitos", "y"=>$dataObitoAsm[0]["qntobitosasm"] * 100 / ($dataObitoAsm[1]["qntobitosasm"] + $dataObitoAsm[0]["qntobitosasm"]) ));
+
+        return $dataPointsObitoAsm;
+    }
+
+    function getObitosDataHip(){
+        $r = DBExecute("SELECT count(participantID) AS qntobitoship FROM obitoshipertensos
+                        UNION
+                        SELECT count(participantID) FROM vivoshipertensos");
+
+        while($res = mysqli_fetch_assoc($r))
+        {
+            $dataObitoHip[] = $res;
+        }
+
+        $dataPointsObitoHip = array(array("label"=>"Altas", "y"=>$dataObitoHip[1]["qntobitoship"]  * 100 / ($dataObitoHip[1]["qntobitoship"] + $dataObitoHip[0]["qntobitoship"]) ),
+        array("label"=>"Obitos", "y"=>$dataObitoHip[0]["qntobitoship"] * 100 / ($dataObitoHip[1]["qntobitoship"] + $dataObitoHip[0]["qntobitoship"]) ));
+
+        return $dataPointsObitoHip;
+    }
 
     
 ?>
