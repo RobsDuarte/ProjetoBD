@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Nov-2020 às 02:19
+-- Tempo de geração: 15-Nov-2020 às 01:09
 -- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.11
+-- versão do PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `vodan`
+-- Banco de dados: `projetobd`
 --
 
 DELIMITER $$
@@ -66,6 +66,196 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Estrutura stand-in para vista `adultos`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `adultos` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `fem`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `fem` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `fumantes`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `fumantes` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `fumantes2`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `fumantes2` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `idades`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `idades` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `idosos`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `idosos` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `jovens`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `jovens` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `leitos`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `leitos` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `masc`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `masc` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `mortos`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `mortos` (
+`pacid_mortos` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura stand-in para vista `mortos2`
 -- (Veja abaixo para a view atual)
 --
@@ -81,6 +271,170 @@ CREATE TABLE `mortos2` (
 ,`listOfValuesID` int(10)
 ,`answer` varchar(512)
 ,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacantiviral`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacantiviral` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidazit`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidazit` (
+`pacazitrom` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidazitrom`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidazitrom` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidclor`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidclor` (
+`pacid` int(10)
+,`formrecordID` int(10)
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidcloro`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidcloro` (
+`pacidcloro` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidcloro2`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidcloro2` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidlop`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidlop` (
+`pacidlop` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `pacidlop2`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `pacidlop2` (
+`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+,`medicalRecord` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `r`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `r` (
+`formRecordID` int(10)
+,`crfFormsID` int(10)
+,`participantID` int(10)
+,`hospitalUnitID` int(10)
+,`questionnaireID` int(10)
+,`dtRegistroForm` timestamp
+,`questionGroupFormRecordID` int(10)
+,`questionID` int(10)
+,`listOfValuesID` int(10)
+,`answer` varchar(512)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `sexofem`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `sexofem` (
+`pacfem` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para vista `sexomasc`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `sexomasc` (
+`pacmasc` int(10)
 );
 
 -- --------------------------------------------------------
@@ -2446,7 +2800,87 @@ INSERT INTO `tb_questiongroupformrecord` (`questionGroupFormRecordID`, `formReco
 (1081, 226, 1, 242, NULL, 'HUGG - ENFERMARIA – COVID'),
 (1095, 229, 1, 242, NULL, 'HUGG - ENFERMARIA – COVID'),
 (1109, 232, 1, 242, NULL, 'HUGG - UNIDADE DE TERAPIA INTENSIVA – COVID A'),
-(1120, 235, 1, 242, NULL, 'HUGG - ENFERMARIA – COVID');
+(1120, 235, 1, 242, NULL, 'HUGG - ENFERMARIA – COVID'),
+(1129, 4, 1, 57, 300, NULL),
+(1130, 7, 1, 57, 298, NULL),
+(1131, 10, 1, 57, 298, NULL),
+(1132, 13, 1, 57, 300, NULL),
+(1133, 16, 1, 57, 300, NULL),
+(1134, 19, 1, 57, 300, NULL),
+(1135, 22, 1, 57, 300, NULL),
+(1136, 25, 1, 57, 300, NULL),
+(1137, 28, 1, 57, 300, NULL),
+(1138, 31, 1, 57, 300, NULL),
+(1139, 34, 1, 57, 300, NULL),
+(1140, 37, 1, 57, 300, NULL),
+(1141, 40, 1, 57, 298, NULL),
+(1142, 43, 1, 57, 300, NULL),
+(1143, 46, 1, 57, 298, NULL),
+(1144, 49, 1, 57, 300, NULL),
+(1145, 52, 1, 57, 298, NULL),
+(1146, 55, 1, 57, 298, NULL),
+(1147, 58, 1, 57, 300, NULL),
+(1148, 61, 1, 57, 300, NULL),
+(1149, 64, 1, 57, 300, NULL),
+(1150, 67, 1, 57, 298, NULL),
+(1151, 70, 1, 57, 300, NULL),
+(1152, 73, 1, 57, 300, NULL),
+(1153, 76, 1, 57, 300, NULL),
+(1154, 79, 1, 57, 298, NULL),
+(1155, 82, 1, 57, 298, NULL),
+(1156, 85, 1, 57, 300, NULL),
+(1157, 88, 1, 57, 300, NULL),
+(1158, 91, 1, 57, 298, NULL),
+(1159, 94, 1, 57, 300, NULL),
+(1160, 97, 1, 57, 300, NULL),
+(1161, 100, 1, 57, 300, NULL),
+(1162, 103, 1, 57, 298, NULL),
+(1163, 106, 1, 57, 300, NULL),
+(1164, 109, 1, 57, 300, NULL),
+(1165, 112, 1, 57, 298, NULL),
+(1166, 115, 1, 57, 300, NULL),
+(1167, 118, 1, 57, 298, NULL),
+(1168, 121, 1, 57, 298, NULL),
+(1169, 124, 1, 57, 300, NULL),
+(1170, 127, 1, 57, 298, NULL),
+(1171, 130, 1, 57, 300, NULL),
+(1172, 133, 1, 57, 298, NULL),
+(1173, 136, 1, 57, 298, NULL),
+(1174, 139, 1, 57, 298, NULL),
+(1175, 142, 1, 57, 298, NULL),
+(1176, 145, 1, 57, 300, NULL),
+(1177, 148, 1, 57, 300, NULL),
+(1178, 151, 1, 57, 298, NULL),
+(1179, 154, 1, 57, 298, NULL),
+(1180, 157, 1, 57, 298, NULL),
+(1181, 160, 1, 57, 298, NULL),
+(1182, 163, 1, 57, 298, NULL),
+(1183, 166, 1, 57, 300, NULL),
+(1184, 169, 1, 57, 298, NULL),
+(1185, 172, 1, 57, 300, NULL),
+(1186, 175, 1, 57, 300, NULL),
+(1187, 178, 1, 57, 298, NULL),
+(1188, 181, 1, 57, 300, NULL),
+(1189, 184, 1, 57, 300, NULL),
+(1190, 187, 1, 57, 298, NULL),
+(1191, 190, 1, 57, 300, NULL),
+(1192, 193, 1, 57, 298, NULL),
+(1193, 196, 1, 57, 298, NULL),
+(1194, 199, 1, 57, 298, NULL),
+(1195, 202, 1, 57, 300, NULL),
+(1196, 205, 1, 57, 300, NULL),
+(1197, 208, 1, 57, 298, NULL),
+(1198, 211, 1, 57, 298, NULL),
+(1199, 214, 1, 57, 298, NULL),
+(1200, 217, 1, 57, 298, NULL),
+(1201, 220, 1, 57, 298, NULL),
+(1202, 223, 1, 57, 300, NULL),
+(1203, 226, 1, 57, 300, NULL),
+(1204, 229, 1, 57, 300, NULL),
+(1205, 232, 1, 57, 300, NULL),
+(1206, 235, 1, 57, 300, NULL),
+(1207, 238, 1, 57, 300, NULL),
+(1208, 241, 1, 57, 300, NULL);
 
 -- --------------------------------------------------------
 
@@ -2582,6 +3016,16 @@ CREATE TABLE `visu` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura stand-in para vista `vivos`
+-- (Veja abaixo para a view atual)
+--
+CREATE TABLE `vivos` (
+`pacid_mortos` int(10)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura stand-in para vista `vivos2`
 -- (Veja abaixo para a view atual)
 --
@@ -2708,11 +3152,200 @@ CREATE TABLE `vw_questiontype_covidcrfrapid` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura para vista `adultos`
+--
+DROP TABLE IF EXISTS `adultos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `adultos`  AS  select `idades`.`participantID` AS `participantID`,`idades`.`hospitalUnitID` AS `hospitalUnitID`,`idades`.`questionnaireID` AS `questionnaireID`,`idades`.`formRecordID` AS `formRecordID`,`idades`.`crfFormsID` AS `crfFormsID`,`idades`.`dtRegistroForm` AS `dtRegistroForm`,`idades`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`idades`.`questionID` AS `questionID`,`idades`.`listOfValuesID` AS `listOfValuesID`,`idades`.`answer` AS `answer`,`idades`.`medicalRecord` AS `medicalRecord` from `idades` where `idades`.`answer` between 19 and 59 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `fem`
+--
+DROP TABLE IF EXISTS `fem`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `fem`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 111 and `visu`.`listOfValuesID` = 284 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `fumantes`
+--
+DROP TABLE IF EXISTS `fumantes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `fumantes`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 57 and `visu`.`listOfValuesID` = 298 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `fumantes2`
+--
+DROP TABLE IF EXISTS `fumantes2`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `fumantes2`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 57 and `visu`.`listOfValuesID` = 298 group by `visu`.`participantID` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `idades`
+--
+DROP TABLE IF EXISTS `idades`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `idades`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 144 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `idosos`
+--
+DROP TABLE IF EXISTS `idosos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `idosos`  AS  select `idades`.`participantID` AS `participantID`,`idades`.`hospitalUnitID` AS `hospitalUnitID`,`idades`.`questionnaireID` AS `questionnaireID`,`idades`.`formRecordID` AS `formRecordID`,`idades`.`crfFormsID` AS `crfFormsID`,`idades`.`dtRegistroForm` AS `dtRegistroForm`,`idades`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`idades`.`questionID` AS `questionID`,`idades`.`listOfValuesID` AS `listOfValuesID`,`idades`.`answer` AS `answer`,`idades`.`medicalRecord` AS `medicalRecord` from `idades` where `idades`.`answer` > 59 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `jovens`
+--
+DROP TABLE IF EXISTS `jovens`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `jovens`  AS  select `idades`.`participantID` AS `participantID`,`idades`.`hospitalUnitID` AS `hospitalUnitID`,`idades`.`questionnaireID` AS `questionnaireID`,`idades`.`formRecordID` AS `formRecordID`,`idades`.`crfFormsID` AS `crfFormsID`,`idades`.`dtRegistroForm` AS `dtRegistroForm`,`idades`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`idades`.`questionID` AS `questionID`,`idades`.`listOfValuesID` AS `listOfValuesID`,`idades`.`answer` AS `answer`,`idades`.`medicalRecord` AS `medicalRecord` from `idades` where `idades`.`answer` between 0 and 19 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `leitos`
+--
+DROP TABLE IF EXISTS `leitos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `leitos`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 228 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `masc`
+--
+DROP TABLE IF EXISTS `masc`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `masc`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 111 and `visu`.`listOfValuesID` = 285 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `mortos`
+--
+DROP TABLE IF EXISTS `mortos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mortos`  AS  select `visu`.`participantID` AS `pacid_mortos` from `visu` where `visu`.`questionID` = 123 and `visu`.`listOfValuesID` = 275 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para vista `mortos2`
 --
 DROP TABLE IF EXISTS `mortos2`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mortos2`  AS SELECT `visu`.`participantID` AS `participantID`, `visu`.`hospitalUnitID` AS `hospitalUnitID`, `visu`.`questionnaireID` AS `questionnaireID`, `visu`.`formRecordID` AS `formRecordID`, `visu`.`crfFormsID` AS `crfFormsID`, `visu`.`dtRegistroForm` AS `dtRegistroForm`, `visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`, `visu`.`questionID` AS `questionID`, `visu`.`listOfValuesID` AS `listOfValuesID`, `visu`.`answer` AS `answer`, `visu`.`medicalRecord` AS `medicalRecord` FROM `visu` WHERE `visu`.`questionID` = 123 AND `visu`.`listOfValuesID` = 275 ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mortos2`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 123 and `visu`.`listOfValuesID` = 275 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacantiviral`
+--
+DROP TABLE IF EXISTS `pacantiviral`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacantiviral`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`crfFormsID` = 3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidazit`
+--
+DROP TABLE IF EXISTS `pacidazit`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidazit`  AS  select `r`.`pacid` AS `pacazitrom` from (select `visu`.`participantID` AS `pacid`,`visu`.`formRecordID` AS `formrecordID`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 305 group by `visu`.`participantID`) `r` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidazitrom`
+--
+DROP TABLE IF EXISTS `pacidazitrom`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidazitrom`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 305 group by `visu`.`participantID` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidclor`
+--
+DROP TABLE IF EXISTS `pacidclor`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidclor`  AS  select `visu`.`participantID` AS `pacid`,`visu`.`formRecordID` AS `formrecordID`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 306 group by `visu`.`participantID` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidcloro`
+--
+DROP TABLE IF EXISTS `pacidcloro`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidcloro`  AS  select `r`.`participantID` AS `pacidcloro` from (select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 306 group by `visu`.`participantID`) `r` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidcloro2`
+--
+DROP TABLE IF EXISTS `pacidcloro2`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidcloro2`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 306 group by `visu`.`participantID` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidlop`
+--
+DROP TABLE IF EXISTS `pacidlop`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidlop`  AS  select `r`.`participantID` AS `pacidlop` from (select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 3 group by `visu`.`participantID`) `r` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `pacidlop2`
+--
+DROP TABLE IF EXISTS `pacidlop2`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pacidlop2`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 101 and `visu`.`listOfValuesID` = 3 group by `visu`.`participantID` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `r`
+--
+DROP TABLE IF EXISTS `r`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `r`  AS  select `t1`.`formRecordID` AS `formRecordID`,`t1`.`crfFormsID` AS `crfFormsID`,`t1`.`participantID` AS `participantID`,`t1`.`hospitalUnitID` AS `hospitalUnitID`,`t1`.`questionnaireID` AS `questionnaireID`,`t1`.`dtRegistroForm` AS `dtRegistroForm`,`t2`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`t2`.`questionID` AS `questionID`,`t2`.`listOfValuesID` AS `listOfValuesID`,`t2`.`answer` AS `answer` from (`tb_formrecord` `t1` join `tb_questiongroupformrecord` `t2` on(`t1`.`formRecordID` = `t2`.`formRecordID` and `t1`.`crfFormsID` = `t2`.`crfFormsID`)) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `sexofem`
+--
+DROP TABLE IF EXISTS `sexofem`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sexofem`  AS  select `visu`.`participantID` AS `pacfem` from `visu` where `visu`.`questionID` = 111 and `visu`.`listOfValuesID` = 284 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `sexomasc`
+--
+DROP TABLE IF EXISTS `sexomasc`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sexomasc`  AS  select `visu`.`participantID` AS `pacmasc` from `visu` where `visu`.`questionID` = 111 and `visu`.`listOfValuesID` = 285 ;
 
 -- --------------------------------------------------------
 
@@ -2721,7 +3354,16 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `visu`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `visu`  AS SELECT `t1`.`participantID` AS `participantID`, `t1`.`hospitalUnitID` AS `hospitalUnitID`, `t1`.`questionnaireID` AS `questionnaireID`, `t1`.`formRecordID` AS `formRecordID`, `t1`.`crfFormsID` AS `crfFormsID`, `t1`.`dtRegistroForm` AS `dtRegistroForm`, `t2`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`, `t2`.`questionID` AS `questionID`, `t2`.`listOfValuesID` AS `listOfValuesID`, `t2`.`answer` AS `answer`, `tb_participant`.`medicalRecord` AS `medicalRecord` FROM (((`tb_formrecord` `t1` join `tb_questiongroupformrecord` `t2` on(`t1`.`formRecordID` = `t2`.`formRecordID` and `t1`.`crfFormsID` = `t2`.`crfFormsID`)) join `tb_participant` on(`t1`.`participantID` = `tb_participant`.`participantID`)) join `tb_assessmentquestionnaire` on(`t1`.`participantID` = `tb_assessmentquestionnaire`.`participantID` and `t1`.`hospitalUnitID` = `tb_assessmentquestionnaire`.`hospitalUnitID` and `t1`.`questionnaireID` = `tb_assessmentquestionnaire`.`questionnaireID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `visu`  AS  select `t1`.`participantID` AS `participantID`,`t1`.`hospitalUnitID` AS `hospitalUnitID`,`t1`.`questionnaireID` AS `questionnaireID`,`t1`.`formRecordID` AS `formRecordID`,`t1`.`crfFormsID` AS `crfFormsID`,`t1`.`dtRegistroForm` AS `dtRegistroForm`,`t2`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`t2`.`questionID` AS `questionID`,`t2`.`listOfValuesID` AS `listOfValuesID`,`t2`.`answer` AS `answer`,`tb_participant`.`medicalRecord` AS `medicalRecord` from (((`tb_formrecord` `t1` join `tb_questiongroupformrecord` `t2` on(`t1`.`formRecordID` = `t2`.`formRecordID` and `t1`.`crfFormsID` = `t2`.`crfFormsID`)) join `tb_participant` on(`t1`.`participantID` = `tb_participant`.`participantID`)) join `tb_assessmentquestionnaire` on(`t1`.`participantID` = `tb_assessmentquestionnaire`.`participantID` and `t1`.`hospitalUnitID` = `tb_assessmentquestionnaire`.`hospitalUnitID` and `t1`.`questionnaireID` = `tb_assessmentquestionnaire`.`questionnaireID`)) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para vista `vivos`
+--
+DROP TABLE IF EXISTS `vivos`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vivos`  AS  select `visu`.`participantID` AS `pacid_mortos` from `visu` where `visu`.`questionID` = 123 and `visu`.`listOfValuesID` = 276 ;
 
 -- --------------------------------------------------------
 
@@ -2730,7 +3372,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vivos2`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vivos2`  AS SELECT `visu`.`participantID` AS `participantID`, `visu`.`hospitalUnitID` AS `hospitalUnitID`, `visu`.`questionnaireID` AS `questionnaireID`, `visu`.`formRecordID` AS `formRecordID`, `visu`.`crfFormsID` AS `crfFormsID`, `visu`.`dtRegistroForm` AS `dtRegistroForm`, `visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`, `visu`.`questionID` AS `questionID`, `visu`.`listOfValuesID` AS `listOfValuesID`, `visu`.`answer` AS `answer`, `visu`.`medicalRecord` AS `medicalRecord` FROM `visu` WHERE `visu`.`questionID` = 123 AND `visu`.`listOfValuesID` = 276 ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vivos2`  AS  select `visu`.`participantID` AS `participantID`,`visu`.`hospitalUnitID` AS `hospitalUnitID`,`visu`.`questionnaireID` AS `questionnaireID`,`visu`.`formRecordID` AS `formRecordID`,`visu`.`crfFormsID` AS `crfFormsID`,`visu`.`dtRegistroForm` AS `dtRegistroForm`,`visu`.`questionGroupFormRecordID` AS `questionGroupFormRecordID`,`visu`.`questionID` AS `questionID`,`visu`.`listOfValuesID` AS `listOfValuesID`,`visu`.`answer` AS `answer`,`visu`.`medicalRecord` AS `medicalRecord` from `visu` where `visu`.`questionID` = 123 and `visu`.`listOfValuesID` = 276 ;
 
 -- --------------------------------------------------------
 
@@ -2739,7 +3381,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_crfforms_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_crfforms_covidcrfrapid`  AS SELECT `t1`.`crfFormsID` AS `crfFormsID`, `t1`.`questionnaireID` AS `questionnaireID`, `t1`.`description` AS `description`, `ontologyURI`('COVIDCRFRAPID','tb_crfforms',`t1`.`crfFormsID`) AS `ontologyURI` FROM `tb_crfforms` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_crfforms_covidcrfrapid`  AS  select `t1`.`crfFormsID` AS `crfFormsID`,`t1`.`questionnaireID` AS `questionnaireID`,`t1`.`description` AS `description`,`ontologyURI`('COVIDCRFRAPID','tb_crfforms',`t1`.`crfFormsID`) AS `ontologyURI` from `tb_crfforms` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2748,7 +3390,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_listofvalues_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_listofvalues_covidcrfrapid`  AS SELECT `t1`.`listOfValuesID` AS `listOfValuesID`, `t1`.`listTypeID` AS `listTypeID`, `t1`.`description` AS `description`, `ontologyURI`('COVIDCRFRAPID','tb_listofvalues',`t1`.`listOfValuesID`) AS `ontologyURI` FROM `tb_listofvalues` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_listofvalues_covidcrfrapid`  AS  select `t1`.`listOfValuesID` AS `listOfValuesID`,`t1`.`listTypeID` AS `listTypeID`,`t1`.`description` AS `description`,`ontologyURI`('COVIDCRFRAPID','tb_listofvalues',`t1`.`listOfValuesID`) AS `ontologyURI` from `tb_listofvalues` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2757,7 +3399,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_listype_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_listype_covidcrfrapid`  AS SELECT `t1`.`listTypeID` AS `listTypeID`, `t1`.`description` AS `description`, `ontologyURI`('COVIDCRFRAPID','tb_listtype',`t1`.`listTypeID`) AS `ontologyURI` FROM `tb_listtype` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_listype_covidcrfrapid`  AS  select `t1`.`listTypeID` AS `listTypeID`,`t1`.`description` AS `description`,`ontologyURI`('COVIDCRFRAPID','tb_listtype',`t1`.`listTypeID`) AS `ontologyURI` from `tb_listtype` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2766,7 +3408,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_questiongroupform_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiongroupform_covidcrfrapid`  AS SELECT `t1`.`crfFormsID` AS `crfFormsID`, `t1`.`questionID` AS `questionID`, `t1`.`questionOrder` AS `questionOrder`, `t2`.`ontologyURI` AS `form_OntologyURI`, `t3`.`ontologyURI` AS `question_OntologyURI` FROM ((`tb_questiongroupform` `t1` join `vw_crfforms_covidcrfrapid` `t2`) join `vw_questions_covidcrfrapid` `t3`) WHERE `t2`.`crfFormsID` = `t1`.`crfFormsID` AND `t3`.`questionID` = `t1`.`questionID` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiongroupform_covidcrfrapid`  AS  select `t1`.`crfFormsID` AS `crfFormsID`,`t1`.`questionID` AS `questionID`,`t1`.`questionOrder` AS `questionOrder`,`t2`.`ontologyURI` AS `form_OntologyURI`,`t3`.`ontologyURI` AS `question_OntologyURI` from ((`tb_questiongroupform` `t1` join `vw_crfforms_covidcrfrapid` `t2`) join `vw_questions_covidcrfrapid` `t3`) where `t2`.`crfFormsID` = `t1`.`crfFormsID` and `t3`.`questionID` = `t1`.`questionID` ;
 
 -- --------------------------------------------------------
 
@@ -2775,7 +3417,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_questiongroup_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiongroup_covidcrfrapid`  AS SELECT `t1`.`questionGroupID` AS `questionGroupID`, `t1`.`description` AS `description`, `t1`.`comment` AS `comment`, `ontologyURI`('COVIDCRFRAPID','tb_questiongroup',`t1`.`questionGroupID`) AS `ontologyURI` FROM `tb_questiongroup` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiongroup_covidcrfrapid`  AS  select `t1`.`questionGroupID` AS `questionGroupID`,`t1`.`description` AS `description`,`t1`.`comment` AS `comment`,`ontologyURI`('COVIDCRFRAPID','tb_questiongroup',`t1`.`questionGroupID`) AS `ontologyURI` from `tb_questiongroup` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2784,7 +3426,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_questionnaire_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questionnaire_covidcrfrapid`  AS SELECT `t1`.`questionnaireID` AS `questionnaireID`, `t1`.`description` AS `description`, `ontologyURI`('COVIDCRFRAPID','tb_questionnaire',`t1`.`questionnaireID`) AS `ontologyURI` FROM `tb_questionnaire` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questionnaire_covidcrfrapid`  AS  select `t1`.`questionnaireID` AS `questionnaireID`,`t1`.`description` AS `description`,`ontologyURI`('COVIDCRFRAPID','tb_questionnaire',`t1`.`questionnaireID`) AS `ontologyURI` from `tb_questionnaire` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2793,7 +3435,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_questions_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questions_covidcrfrapid`  AS SELECT `t1`.`questionID` AS `questionID`, `t1`.`description` AS `description`, `t1`.`questionTypeID` AS `questionTypeID`, `t1`.`listTypeID` AS `listTypeID`, `t1`.`questionGroupID` AS `questionGroupID`, `t1`.`subordinateTo` AS `subordinateTo`, `t1`.`isAbout` AS `isAbout`, `ontologyURI`('COVIDCRFRAPID','tb_questions',`t1`.`questionID`) AS `ontologyURI` FROM `tb_questions` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questions_covidcrfrapid`  AS  select `t1`.`questionID` AS `questionID`,`t1`.`description` AS `description`,`t1`.`questionTypeID` AS `questionTypeID`,`t1`.`listTypeID` AS `listTypeID`,`t1`.`questionGroupID` AS `questionGroupID`,`t1`.`subordinateTo` AS `subordinateTo`,`t1`.`isAbout` AS `isAbout`,`ontologyURI`('COVIDCRFRAPID','tb_questions',`t1`.`questionID`) AS `ontologyURI` from `tb_questions` `t1` ;
 
 -- --------------------------------------------------------
 
@@ -2802,7 +3444,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vw_questiontype_covidcrfrapid`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiontype_covidcrfrapid`  AS SELECT `t1`.`questionTypeID` AS `questionTypeID`, `t1`.`description` AS `description`, `ontologyURI`('COVIDCRFRAPID','tb_questiontype',`t1`.`questionTypeID`) AS `ontologyURI` FROM `tb_questiontype` AS `t1` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_questiontype_covidcrfrapid`  AS  select `t1`.`questionTypeID` AS `questionTypeID`,`t1`.`description` AS `description`,`ontologyURI`('COVIDCRFRAPID','tb_questiontype',`t1`.`questionTypeID`) AS `ontologyURI` from `tb_questiontype` `t1` ;
 
 --
 -- Índices para tabelas despejadas
@@ -3064,7 +3706,7 @@ ALTER TABLE `tb_questiongroup`
 -- AUTO_INCREMENT de tabela `tb_questiongroupformrecord`
 --
 ALTER TABLE `tb_questiongroupformrecord`
-  MODIFY `questionGroupFormRecordID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1129;
+  MODIFY `questionGroupFormRecordID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1209;
 
 --
 -- AUTO_INCREMENT de tabela `tb_questionnaire`
@@ -3100,4 +3742,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
