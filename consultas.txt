@@ -1,0 +1,13 @@
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_1'> Nome da Primeira Busca</p></a>
+<p class='divisor c'></p>
+
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_2'> Nome da Segunda Busca</p></a>
+<p class='divisor c'></p>
+
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_3'> Nome da Terceira Busca</p></a>
+<p class='divisor c'></p>
+
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_4'> Nome da Quarta Busca</p></a>
+<p class='divisor c'></p>
+
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_5'> Nome da Quinta Busca Busca</p></a>

@@ -1,0 +1,24 @@
+<div class="col-12 c">
+<input type="checkbox" name="" id="radio_1">                       
+<label for="radio_1" class="f">Outra 1</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_2">                       
+    <label for="radio_3" class="f">Outra 2</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_3">                       
+    <label for="radio_3" class="f">Outra 3</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_4">                       
+    <label for="radio_4" class="f">Outra 4</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_5">                       
+    <label for="radio_5" class="f">Outra 5</label>                            
+</div> 

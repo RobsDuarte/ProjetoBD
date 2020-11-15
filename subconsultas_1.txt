@@ -1,0 +1,24 @@
+<div class="col-12 c">
+<input type="checkbox" onclick="ObitosFem()" name="" id="radio_1">                       
+<label for="radio_1" class="f">Variavel 1</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_2">                       
+    <label for="radio_3" class="f">Variavel 2</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_3">                       
+    <label for="radio_3" class="f">Variavel 3</label>                            
+</div>
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_4">                       
+    <label for="radio_4" class="f">Variavel 4</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="checkbox" name="" id="radio_5">                       
+    <label for="radio_5" class="f">Variavel 5</label>                            
+</div> 
