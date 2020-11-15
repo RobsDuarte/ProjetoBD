@@ -1,23 +1,11 @@
 <?php
-    require 'config.php';
+	require 'config.php';
     require 'connection.php';
     require 'database.php';
-    $r = DBExecute( "SELECT COUNT(participantID) AS qntobitosfem 
-                    FROM (SELECT * FROM mortos2) M INNER JOIN
-                    (SELECT participantID AS idfem FROM fem) F ON M.participantID=F.idfem
-                    UNION
-                    SELECT COUNT(participantID) AS qntaltasfem 
-                    FROM (SELECT * FROM vivos2) M INNER JOIN
-                    (SELECT participantID AS idfem FROM fem) F ON M.participantID=F.idfem");
+    require 'data.php';
 
-    while($res = mysqli_fetch_assoc($r))
-    {
-        $dataObitoFem[] = $res;
-    }
-    $dataPointsObitoFem = array(array("label"=>"Vivos", "y"=>$dataObitoFem[1]["qntobitosfem"]  * 100 / ($dataObitoFem[1]["qntobitosfem"] + 
-        $dataObitoFem[0]["qntobitosfem"]) ),
-    array("label"=>"Mortos", "y"=>$dataObitoFem[0]["qntobitosfem"] * 100 / ($dataObitoFem[1]["qntobitosfem"] + $dataObitoFem[0]["qntobitosfem"]) ));
-
+    $dataPointsObitoFem = getObitosDataFem();
+    $dataPointsObitoMan = getObitosDataMan();
 ?>
 <!DOCTYPE html>
 
@@ -26,20 +14,53 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <link href="style.css" rel="stylesheet" type="text/css">  
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
         <script src="function.js"></script> 
-
-        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>  
         <script>
-            function ObitosFem() {
-                var obitoFemChart = new CanvasJS.Chart("obitoFemContainer", {
-                animationEnabled: true,
-                title: { text: "Porcentagem de Mortos e Vivos Mulheres" },
-                subtitles: { text: "" },
-                data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoFem, JSON_NUMERIC_CHECK); ?> }]
-                });
-                obitoFemChart.render();
-            }
-        </script>          
+        	function chartControl(ele){
+        		if(ele.id == "radio_1")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosFem();
+        			currentElement = document.getElementById("obitoFemContainer");
+        			currentElement.style.display = "block";
+        		}
+        		else if(ele.id == "radio_2")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosMan();
+        			currentElement = document.getElementById("obitoManContainer");
+        			currentElement.style.display = "block";
+        		}
+        	}
+        	function ObitosFem()
+			{
+				var obitoFemChart = new CanvasJS.Chart("obitoFemContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Mulheres" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoFem, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoFemChart.render();
+			}
+
+			function ObitosMan()
+			{
+				var obitoManChart = new CanvasJS.Chart("obitoManContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Homens" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoMan, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoManChart.render();
+			}
+        </script>         
     </head>
         
     <body>     
@@ -67,8 +88,8 @@
                 <div class=' col-5  box-shadow'>  
                     <div class="col-2 t" id="teste"></div> 
                     <div class='col-10 shadow-graphic'>
-
-                        <div id="obitoFemContainer" style="height: 100%; width: 100%;"></div>
+                        <div id="obitoFemContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoManContainer" style="height: 100%; width: 100%; display: none;"></div>
                     </div>   
 
                 </div>                   

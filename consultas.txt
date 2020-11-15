@@ -1,4 +1,4 @@
-<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_1'> Nome da Primeira Busca</p></a>
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_1'> Relação Obitos e Altas</p></a>
 <p class='divisor c'></p>
 
 <a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_2'> Nome da Segunda Busca</p></a>
