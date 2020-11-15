@@ -88,5 +88,36 @@
         return $dataPointsObitoHip;
     }
 
+    function getObitosDataIdo(){
+        $r = DBExecute("SELECT count(participantID) AS qntobitosido FROM obitosidosos
+                        UNION
+                        SELECT count(participantID) FROM vivosidosos");
+
+        while($res = mysqli_fetch_assoc($r))
+        {
+            $dataObitoIdo[] = $res;
+        }
+
+        $dataPointsObitoIdo = array(array("label"=>"Altas", "y"=>$dataObitoIdo[1]["qntobitosido"]  * 100 / ($dataObitoIdo[1]["qntobitosido"] + $dataObitoIdo[0]["qntobitosido"]) ),
+        array("label"=>"Obitos", "y"=>$dataObitoIdo[0]["qntobitosido"] * 100 / ($dataObitoIdo[1]["qntobitosido"] + $dataObitoIdo[0]["qntobitosido"]) ));
+
+        return $dataPointsObitoIdo;
+    }
+
+    function getObitosDataAdu(){
+        $r = DBExecute("SELECT count(participantID) AS qntobitosadu FROM obitosadultos
+                        UNION
+                        SELECT count(participantID) FROM vivosadultos");
+
+        while($res = mysqli_fetch_assoc($r))
+        {
+            $dataObitoAdu[] = $res;
+        }
+
+        $dataPointsObitoAdu = array(array("label"=>"Altas", "y"=>$dataObitoAdu[1]["qntobitosadu"]  * 100 / ($dataObitoAdu[1]["qntobitosadu"] + $dataObitoAdu[0]["qntobitosadu"]) ),
+        array("label"=>"Obitos", "y"=>$dataObitoAdu[0]["qntobitosadu"] * 100 / ($dataObitoAdu[1]["qntobitosadu"] + $dataObitoAdu[0]["qntobitosadu"]) ));
+
+        return $dataPointsObitoAdu;
+    }
     
 ?>

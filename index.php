@@ -9,6 +9,8 @@
     $dataPointsObitoFum = getObitosDataFum();
     $dataPointsObitoAsm = getObitosDataAsm();
     $dataPointsObitoHip = getObitosDataHip();
+    $dataPointsObitoIdo = getObitosDataIdo();
+    $dataPointsObitoAdu = getObitosDataAdu();
 ?>
 <!DOCTYPE html>
 
@@ -71,6 +73,26 @@
         			currentElement = document.getElementById("obitoHipContainer");
         			currentElement.style.display = "block";
         		}
+        		else if(ele.id == "radio_6")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosIdo();
+        			currentElement = document.getElementById("obitoIdoContainer");
+        			currentElement.style.display = "block";
+        		}
+        		else if(ele.id == "radio_7")
+        		{
+        			if(!(typeof currentElement == 'undefined'))
+        			{
+        				currentElement.style.display = "none";
+        			}
+        			ObitosAdu();
+        			currentElement = document.getElementById("obitoAduContainer");
+        			currentElement.style.display = "block";
+        		}
         	}
         	function ObitosFem()
 			{
@@ -120,6 +142,24 @@
     			});
     			obitoHipChart.render();
 			}
+			function ObitosIdo(){
+				var obitoIdoChart = new CanvasJS.Chart("obitoIdoContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Idosos" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoIdo, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoIdoChart.render();
+			}
+			function ObitosAdu(){
+				var obitoAduChart = new CanvasJS.Chart("obitoAduContainer", {
+    			animationEnabled: true,
+    			title: { text: "Porcentagem de Obitos e Altas Idosos" },
+    			subtitles: { text: "Obito X Alta" },
+    			data: [{ type: "pie", yValueFormatString: "#,##0.00\"%\"", indexLabel: "{label} ({y})", dataPoints: <?php echo json_encode($dataPointsObitoAdu, JSON_NUMERIC_CHECK); ?> }]
+    			});
+    			obitoAduChart.render();
+			}
         </script>         
     </head>
         
@@ -153,6 +193,8 @@
                         <div id="obitoFumContainer" style="height: 100%; width: 100%; display: none;"></div>
                         <div id="obitoAsmContainer" style="height: 100%; width: 100%; display: none;"></div>
                         <div id="obitoHipContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoIdoContainer" style="height: 100%; width: 100%; display: none;"></div>
+                        <div id="obitoAduContainer" style="height: 100%; width: 100%; display: none;"></div>
                     </div>   
 
                 </div>                   

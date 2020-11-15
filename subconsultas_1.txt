@@ -20,5 +20,14 @@
 
 <div class="col-12 c">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_5">                       
-    <label for="radio_5" class="f">Idosos</label>                            
+    <label for="radio_5" class="f">Hipertensos</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_6">                       
+    <label for="radio_6" class="f">Idosos</label>                            
+</div> 
+<div class="col-12 c">
+    <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_7">                       
+    <label for="radio_7" class="f">Adultos</label>                            
 </div> 
