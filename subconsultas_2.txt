@@ -1,34 +1,34 @@
-<div class="col-12 c">
+<div class="col-12 c f">
 <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_21">                       
-<label for="radio_21" class="f">Mulheres</label>                            
+<label for="radio_21">Mulheres</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_22">                       
-    <label for="radio_22" class="f">Homens</label>                            
+    <label for="radio_22">Homens</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_23">                       
-    <label for="radio_23" class="f">Fumantes</label>                            
+    <label for="radio_23">Fumantes</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_24">                       
-    <label for="radio_24" class="f">Asmaticos</label>                            
+    <label for="radio_24">Asmaticos</label>                            
 </div> 
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_25">                       
-    <label for="radio_25" class="f">Hipertensos</label>                            
+    <label for="radio_25">Hipertensos</label>                            
 </div> 
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_26">                       
-    <label for="radio_26" class="f">Idosos</label>                            
+    <label for="radio_26">Idosos</label>                            
 </div> 
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_27">                       
-    <label for="radio_27" class="f">Adultos</label>                            
+    <label for="radio_27">Adultos</label>                            
 </div> 
