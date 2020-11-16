@@ -1,33 +1,33 @@
-<div class="col-12 c">
+<div class="col-12 c f">
 <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_1">                       
-<label for="radio_1" class="f">Mulheres</label>                            
+<label for="radio_1">Mulheres</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_2">                       
-    <label for="radio_3" class="f">Homens</label>                            
+    <label for="radio_3">Homens</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_3">                       
-    <label for="radio_3" class="f">Fumantes</label>                            
+    <label for="radio_3">Fumantes</label>                            
 </div>
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_4">                       
-    <label for="radio_4" class="f">Asmaticos</label>                            
+    <label for="radio_4" >Asmaticos</label>                            
 </div> 
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_5">                       
-    <label for="radio_5" class="f">Hipertensos</label>                            
+    <label for="radio_5">Hipertensos</label>                            
 </div> 
 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_6">                       
-    <label for="radio_6" class="f">Idosos</label>                            
+    <label for="radio_6">Idosos</label>                            
 </div> 
-<div class="col-12 c">
+<div class="col-12 c f">
     <input type="radio" onclick='chartControl(this)' name="ObitosAltas" id="radio_7">                       
-    <label for="radio_7" class="f">Adultos</label>                            
+    <label for="radio_7">Adultos</label>                            
 </div> 
