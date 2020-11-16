@@ -9,4 +9,6 @@ function GetFile(id){
     };
     xmlhttp.open('POST',nome_arquivo +'.txt',true);
     xmlhttp.send();   
+
+    chartControl(document.getElementById(id));
 }

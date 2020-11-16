@@ -1,13 +1,9 @@
 <a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_1'> Relação Obitos e Altas</p></a>
 <p class='divisor c'></p>
 
-<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_2'> Nome da Segunda Busca</p></a>
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_2'> Eficacia Antivirais</p></a>
 <p class='divisor c'></p>
 
-<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_3'> Nome da Terceira Busca</p></a>
+<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_3'> Tempo de UTI</p></a>
 <p class='divisor c'></p>
 
-<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_4'> Nome da Quarta Busca</p></a>
-<p class='divisor c'></p>
-
-<a href="#"><p class="c text-aling-center" onclick='GetFile(this.id);' id='subconsultas_5'> Nome da Quinta Busca Busca</p></a>

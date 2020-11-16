@@ -1,24 +1,39 @@
 <div class="col-12 c">
-<input type="checkbox" name="" id="radio_1">                       
-<label for="radio_1" class="f">Mais 1</label>                            
+<input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_31">                       
+<label for="radio_31" class="f">Mulheres</label>                            
 </div>
 
 <div class="col-12 c">
-    <input type="checkbox" name="" id="radio_2">                       
-    <label for="radio_3" class="f">Mais 2</label>                            
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_32">                       
+    <label for="radio_32" class="f">Homens</label>                            
 </div>
 
 <div class="col-12 c">
-    <input type="checkbox" name="" id="radio_3">                       
-    <label for="radio_3" class="f">Mais 3</label>                            
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_33">                       
+    <label for="radio_33" class="f">Fumantes</label>                            
 </div>
 
 <div class="col-12 c">
-    <input type="checkbox" name="" id="radio_4">                       
-    <label for="radio_4" class="f">Mais 4</label>                            
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_34">                       
+    <label for="radio_34" class="f">Asmaticos</label>                            
 </div> 
 
 <div class="col-12 c">
-    <input type="checkbox" name="" id="radio_5">                       
-    <label for="radio_5" class="f">É igual a 10</label>                            
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_35">                       
+    <label for="radio_35" class="f">Hipertensos</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_36">                       
+    <label for="radio_36" class="f">Idosos</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_37">                       
+    <label for="radio_37" class="f">Azitromicina</label>                            
+</div> 
+
+<div class="col-12 c">
+    <input type="radio" name="ObitosAltas" onclick='chartControl(this)' id="radio_38">                       
+    <label for="radio_38" class="f">Cloroquina</label>                            
 </div> 
