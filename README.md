@@ -1,2 +1,1 @@
-# ProjetoBD
-Universidade Federal do Rio de Janeiro, trabalho final da disciplina Banco de Dados 1.
+# Projeto final da disciplina banco de dados, Universidade Federal do Rio de Janeiro - UFRJ.
