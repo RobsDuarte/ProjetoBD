@@ -2,7 +2,7 @@
 	require 'config.php';
     require 'connection.php';
     require 'database.php';
-    require 'data.php';
+    require 'data.php'; 
 	
     $dataPointsObito = getObitosData();
     $dataPointsObitoFem = getObitosDataFem();
