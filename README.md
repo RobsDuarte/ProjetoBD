@@ -1,11 +1,11 @@
-# Projeto final da disciplina Banco de Dados 1, Universidade Federal do Rio de Janeiro - UFRJ
+# Projeto final da disciplina Banco de Dados da Universidade Federal do Rio de Janeiro - UFRJ
 
 ## Descrição
  Neste projeto foi nos dados um exemplo do banco de dados usado  na Fundação Oswaldo Cruz (Fiocruz) e com as informações nele contidas criamos uma interface que auxiliasse o usuário a coletar informações sobre a covid-19. 
 
-![](../ProjetoBD/img/1.gif)
-![](../ProjetoBD/img/1.gif)
-![](../ProjetoBD/img/1.gif)
+![](img/1.gif)
+![](img/2.gif)
+![](img/3.gif)
 
 
 ## Tecnologias
