@@ -3,9 +3,10 @@
 ## Descrição
  Neste projeto foi nos dados um exemplo do banco de dados usado  na Fundação Oswaldo Cruz (Fiocruz) e com as informações nele contidas criamos uma interface que auxiliasse o usuário a coletar informações sobre a covid-19. 
 
-<img src="../ProjetoBD/img/1.gif"> <br>
-<img src="../ProjetoBD/img/2.gif"> <br>
-<img src="../ProjetoBD/img/3.gif"> <br>
+![](1.gif)
+![](2.gif)
+![](3.gif)
+
 
 ## Tecnologias
  :heavy_check_mark: PHP <br>
