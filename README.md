@@ -10,9 +10,12 @@
 
 ## Tecnologias
  :heavy_check_mark: PHP <br>
- :heavy_check_mark: Javascript <br>
+ :heavy_check_mark: JavaScript <br>
  :heavy_check_mark: HTML <br>
  :heavy_check_mark: CSS <br>
- :heavy_check_mark: Canvasjs - Uma biblioteca do javascript para criação de gráficos <br>
- :heavy_check_mark: Mysql <br>
+ :heavy_check_mark: CanvasJS - Uma biblioteca do javascript para criação de gráficos <br>
+ :heavy_check_mark: MySQL <br>
+
+ ## Contato
+ robsduar@gmail.com :email: :mailbox:
 
